@@ -1,0 +1,30 @@
+language: node_js
+node_js:
+- 4.0
+- 6.0
+before_install:
+- npm install -g mocha
+install:
+- npm install
+script:
+- npm test
+after_success:
+- "./create-release-tag.sh"
+after_deploy:
+- "./update-release-branch.sh"
+deploy:
+  provider: cloudfoundry
+  api: https://api.cloud.service.gov.uk
+  username: tom.dolan@digital.cabinet-office.gov.uk
+  password:
+    secure: EThCGWKOtwSGMOhq+3Llw1DnGDNjwIqHVz6WrUTt40CA/SdvJwH9Vv+9j1KgaI+ZVcx1yYVlKfyBYZj8ttzcw4xOsCrBNNp/C9U7vCCzuok5tG4MhHSr6t4GFhoJB6TvhTV0RJjZVmaJPAaHZP+UyNzGAYRYjmqsDcaY8wbdMQ5eJQnNmAt1uXv9dR61sPOq5QD/LKDH/YC0lOM8xGow9/3g1VbFxH0vRHgHHciRnBCbOVV5g/NkzJ1GFQjEm3FG/xDMyJjgHxZGVR+hyZg/BfYBXqbEPvHmnNT+FvBEHUXbfAYfnp70Ar0J7PxFh10SDiOUe/2CsjsJKoblIuXJfR8wdSIKdGVjZRYcf7cpiLnkRv0ll8sYitH48nTl27gouvqTxFhIO0MUuZ9dIVDmnx1pxLfPbqPcRK36cTxNCHxrTatYlalnZis+aOS/2ZPqwC5Qafs+f2UFD7woUia/G8x6d0bvS8LPX6SpoNWyxFXFD2NxLH3AcEKmPabf2igD8VTMVV8QvbPxx5s9C0GEPBEXuS4Bv07eMiUQWWwbA79U9G6jFY8uV2xtIAtIci9rM/juAn/izEavrJI9pWvV0n7Brqz1RjZHnPdPY8T5LrcJwfPDBekdtzU0J116i+TTKi1A4Y4rwyAMpqbQo8PVIOeKctmXGtwe9vujMiDknhU=
+  organization: paas-demo
+  space: sandbox
+  on:
+    repo: tomskerous/paas-ss-proto
+notifications:
+  email: false
+sudo: false
+env:
+  global:
+  - secure: esj3ut+TwKX25QzU1koJyTVIX+x1V55graI65X8LiYXKcOP040VPJ9lIC0HeRs5UViBM0Ur1F93rGdgW2zYVzu5MLZoH7KjpzMcG30x+FDqLChT0JfNcLLtLm/wIhx/OAAmsBxXlvjPp092BeEKd3Jug8d329TxwwK5G5XxAatg=

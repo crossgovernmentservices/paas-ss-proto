@@ -1,5 +1,5 @@
 ---
 applications:
-- name: paas-ss-proto
+- name: td-paas-ss-proto
   memory: 128M
   buildpack: python_buildpack
