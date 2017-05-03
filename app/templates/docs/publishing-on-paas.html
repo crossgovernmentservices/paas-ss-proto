@@ -17,37 +17,40 @@
 
       <p class="lede">Follow these 7 steps to get your prototype online.</p>
 
-      <p>We recommend using <a href="https://www.cloud.service.gov.uk/">GOV.UK PaaS</a> to get your prototype online. It’s simple and fast to deploy new versions as you work.</p>
+      <p><a href="https://www.cloud.service.gov.uk/">GOV.UK PaaS</a> is another way to get your prototype online. It’s simple and fast to deploy new versions as you work, learning <code>git</code> isn't essential, and the platform is accredited to 'Official'.</p>
       <p>Once your prototype is on PaaS, other people will be able to access and try your prototype from their own computers or mobile devices.</p>
 
       <p class="panel">
-        We'll show how to secure your prototype in step 6 but <strong>DO NOT</strong> enter real user data in to prototypes hosted on PaaS. If your prototype stores or collects user data, talk to a security professional about appropriate security steps you must take.
+        We'll show how to secure your prototype in step 6 but <strong>DO NOT</strong> enter real user data in to prototypes hosted on PaaS. If your prototype stores or collects user data, talk to a security professional about appropriate security steps you and your developer colleagues must take.
       </p>
 
         <h2 id="1-sign-up-for-account" class="heading-medium">1) Sign up for an account</h2>
         <p>You need to be able to log in to your account each time you want to publish a new version of a prototype.</p>
-        <p><a href="">Create an account</a> or move on to step 2 if you already have one.</p>
-        
+        <p><a href="https://www.cloud.service.gov.uk/request-trial.html">Create an account</a> and return to this page, or move on to step 2 if you already have one.</p>
 
-        <h2 id="2-install-cloud-foundry-cli" class="heading-medium">2) Install the Cloud Foundry CLI</h2>
-        <p>The PaaS is built on top Cloud Foundry. You to install a Commandline interface (<abbr>CLI</abbr>) tool to interact with it.</p>
-        <p>There are a couple of ways to do this.</p>
+
+        <h2 id="2-install-cloud-foundry-cli" class="heading-medium">2) Install the PaaS/Cloud Foundry command line tools</h2>
+        <p>GOV.UK PaaS is built on top of an open source technology called Cloud Foundry. You need to install a command line interface (<abbr>CLI</abbr>) tool to interact with it through a terminal window.</p>
+        <p>There are a couple of ways to do the installation.</p>
         <ul>
           <li>You can <a href="https://github.com/cloudfoundry/cli#installers-and-compressed-binaries">get the install package (.pkg)</a> from the Cloud foundry github page. Once downloaded double click to start the installation.</li>
           <li>Or if you <a href="https://github.com/cloudfoundry/cli#installing-using-a-package-manager">use a package manager</a> the Cloud Foundry CLI can be installed that way too.</li>
         </ul>
 
-        <p>After following your preferred method check that it has installed correctly by running</p>
+				<div class="panel">Because PaaS is built on top of Cloud Foundry, the most common command is <code>cf</code> - asking the underlying technology to do things with your code on a remote server.</div>
+
+        <p>After following your preferred method, check that it's installed correctly by opening a terminal window and running</p>
         <pre><code>cf -v</code></pre>
 
-        <p>You should get a messages like this, confirming the installed version:</p>
+        <p>You should get a message like this, confirming the installed version:</p>
         <pre><code>cf version X.X.X…</code></pre>
 
         <p>For more information check the <a href="https://docs.cloud.service.gov.uk/#quick-setup-guide ">PaaS setup docs</a>.</p>
 
-        <h2 id="3-login-to-cloud-foundry" class="heading-medium">3) Login to Cloud Foundry</h2>
+        <h2 id="3-login-to-cloud-foundry" class="heading-medium">3) Login to GOV.UK PaaS</h2>
 
-        <p>Log in on the commandline by typing this</p>
+
+				<p>Log in on the commandline by typing this</p>
 
         <pre><code>cf login -a api.cloud.service.gov.uk -u USERNAME</code></pre>
 
@@ -57,7 +60,7 @@
 
         <h2 id="4-choose-name-for-prototype" class="heading-medium">4) Choose name for prototype</h2>
 
-        <p>Locate the <code>manifest.yml</code> file in the home folder of your prototype. It should look similar to this:</p>
+        <p>Go to the home folder of your prototype and see if the <code>manifest.yml</code> file exists. For a freshly downloaded prototype kit it should look similar to this:</p>
 
 <pre><code>---
 applications:
@@ -66,7 +69,7 @@ applications:
 
         <p>If there isn't one, create it then copy and paste the content shown.</p>
 
-        <p>Next, replace <code>[NAME_OF_YOUR_APP]</code> with the name of your prototype. Choose a name that is unique. This name will be used in the url for your prototype.</p>
+        <p>Next, replace <code>[NAME_OF_YOUR_APP]</code> with a name for your prototype, making sure you don't leave the square brackets. This name will be used in the url for your prototype, so choose a name that is unique.</p>
 
         <p>For example: <code>govuk-payments-prototype</code> will create an app at: <code>govuk-payments-prototype.cloudapps.digital</code></p>
 
@@ -76,7 +79,7 @@ applications:
 
         <pre><code>cf push</code></pre>
 
-        <p>This will create what Cloud foundry calls an app if one by that name doesn't exist already. It will copy across all your prototype files.</p>
+        <p>This will create a Cloud foundry <code>app</code> if one by that name doesn't exist already. It will copy across all your prototype files.</p>
 
         <div class="panel">You can override the name in the manifest and push to a different URL by including the new name in the <code>cf</code> command. For example: <p><pre><code>cf push [new-name-here]</code></pre></p><p>This can be useful when testing multiple versions.</p></div>
 
@@ -108,8 +111,9 @@ applications:
 
         <h3>Further reading on PaaS</h3>
         <ul class="text">
-          <li><a href="/docs/how-to-manage-your-space-quota.html">How to manage your space quota</a></li>
-          <li><a href="/docs/github-and-cloudfoundry.html">Github and Cloud Foundry</a></li>
+	        <li><a href="/docs/how-to-manage-your-space-quota.html">How to manage your space quota</a></li>
+          <li><a href="/docs/github-and-cloudfoundry.html">Github and PaaS/Cloud Foundry</a></li>
+					<li><a href="https://docs.cloud.service.gov.uk/#use-travis">Using Travis CI with PaaS</a></li>
           <li><a href="/docs/collaborate-on-prototypes.html">Add other users to GOV.UK PaaS and work together on a prototype</a></li>
           <li><a href="https://docs.cloud.service.gov.uk/#deployment-overview">Deploying apps to PaaS</a></li>
         </ul>
@@ -117,6 +121,6 @@ applications:
 		</div>
 
 	</div>
-	
+
 </main>
 {% endblock %}
