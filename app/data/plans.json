@@ -36,7 +36,19 @@
       "Scaling": "Yes - up to memory limit",
       "oohs": "Yes",
       "Cost": 4500
+    },
+    {
+      "title": "Huge plan",
+      "Memory": "64GM RAM",
+      "Postgres": "2 'huge' PostgreSQL instances (32GB) + 6 medium PostgreSQL instances (8GB) + 24 'tiny' Postgres database instances (1GB) ",
+      "Logit": "1 'large' Logit instance + 1 medium Logit instance + 2 tiny Logit instances (0.5GB each)",
+      "Redis": "2 medium Redis instances, 4 'tiny' Redis instances",
+      "Mongo": "1 'huge' Mongo instance + 4 'tiny' Mongo instances",
+      "ElasticSearch": "1 large Elastic Search instance, 4 tiny Elastic Search instances",
+      "RabbitMQ": "1 'huge' RabbitMQ instance + 4 small RabbitMQ instances",
+      "Scaling": "Yes - up to memory limit",
+      "oohs": "Yes",
+      "Cost": 9000
     }
-    
   ]
 }
