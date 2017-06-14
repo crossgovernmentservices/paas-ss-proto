@@ -13,6 +13,16 @@
       "Logit": "1 small Logit instance (1GB) + 2 tiny Logit instances (0.5GB each)",
       "Scaling": "Yes",
       "Cost": 600
+    },
+    {
+      "title": "Medium plan",
+      "Memory": "6GM RAM",
+      "Postgres": "1 'tiny' PostgreSQL instances (1GB) + 2 medium PostgreSQL instances (8GB)",
+      "Logit": "1 medium Logit instance (3GB) + 2 tiny Logit instances (0.5GB each)",
+      "Redis": "3 'tiny' Redis instances",
+      "Scaling": "Yes",
+      "oohs": "Yes",
+      "Cost": 1250
     }
   ]
 }
