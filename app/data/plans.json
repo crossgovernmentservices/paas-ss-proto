@@ -1,0 +1,10 @@
+{
+  "plans": [
+    {
+      "title": "Free plan",
+      "Memory": "1GB RAM",
+      "Postgres": "2 'tiny' PostgreSQL instances (1GB)",
+      "Cost": 0
+    }
+  ]
+}
