@@ -5,6 +5,14 @@
       "Memory": "1GB RAM",
       "Postgres": "2 'tiny' PostgreSQL instances (1GB)",
       "Cost": 0
+    },
+    {
+      "title": "Small plan",
+      "Memory": "3GM RAM",
+      "Postgres": "1 medium PostgreSQL instance (8GB) - backed up + 2 'tiny' PostgreSQL instances (1GB)",
+      "Logit": "1 small Logit instance (1GB) + 2 tiny Logit instances (0.5GB each)",
+      "Scaling": "Yes",
+      "Cost": 600
     }
   ]
 }
