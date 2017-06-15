@@ -16,4 +16,6 @@ def index():
 def table_v1():
   return render_template('plans-table.html')
 
-
+@plans.route('/cards-v1')
+def cards_v1():
+  return render_template('plans-summary-card.html')
