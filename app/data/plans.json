@@ -8,7 +8,7 @@
     },
     {
       "title": "Small plan",
-      "Memory": "3GM RAM",
+      "Memory": "3GB RAM",
       "Postgres": ["1 medium instance (8GB) + backed up", "2 'tiny' instances (1GB)"],
       "Logit": ["1 small instance (1GB)", "2 tiny instances (0.5GB each)"],
       "Scaling": "Yes",
@@ -16,7 +16,7 @@
     },
     {
       "title": "Medium plan",
-      "Memory": "6GM RAM",
+      "Memory": "6GB RAM",
       "Postgres": ["1 'tiny' instances (1GB)", "2 medium instances (8GB)"],
       "Logit": ["1 medium instance (3GB)", "2 tiny instances (0.5GB each)"],
       "Redis": ["3 'tiny' instances"],
@@ -26,7 +26,7 @@
     },
     {
       "title": "Large plan",
-      "Memory": "24GM RAM",
+      "Memory": "24GB RAM",
       "Postgres": ["1 large instances (16GB)", "2 medium instances (8GB)", "6 tiny instance (1GB)"],
       "Logit": ["1 large instance (5GB)", "2 tiny instances (0.5GB each)"],
       "Redis": ["1 medium instance", "2 tiny instances"],
@@ -39,7 +39,7 @@
     },
     {
       "title": "Huge plan",
-      "Memory": "64GM RAM",
+      "Memory": "64GB RAM",
       "Postgres": ["2 'huge' instances (32GB)", "6 medium instances (8GB)", "24 'tiny' instances (1GB)"],
       "Logit": ["1 'large' instance", "1 medium instance", "2 tiny instances (0.5GB each)"],
       "Redis": ["2 medium instances", "4 'tiny' instances"],
