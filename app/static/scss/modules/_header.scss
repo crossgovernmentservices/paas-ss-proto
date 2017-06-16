@@ -157,8 +157,10 @@ $active-nav-color: #1d8feb;
     clear: none;
   }
 
-  .phase-banner {
+  .phase-tag {
+    display: inline;
     margin-left: 5px;
+    vertical-align: middle;
   }
 }
 

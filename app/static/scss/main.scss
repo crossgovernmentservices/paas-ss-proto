@@ -13,7 +13,7 @@
 @import "modules/hero-button.scss";
 @import "modules/hero-alternative-action.scss";
 @import "modules/masthead.scss";
-@import "modules/phase-banner.scss";
+//@import "modules/phase-banner.scss";
 @import "modules/skip-link.scss";
 
 @import "patterns/callouts.scss";
@@ -84,4 +84,8 @@
   border-radius: 50%;
   border: 5px solid $page-colour;
   padding: 5px;
+}
+
+.phase-banner .phase-tag-prototype {
+  background: $text-colour;
 }
