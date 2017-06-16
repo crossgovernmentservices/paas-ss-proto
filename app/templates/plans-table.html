@@ -10,71 +10,103 @@
       <thead>
         <tr>
           <th scope="col"></th>
-          <th class="numeric" scope="col">Free</th>
-          <th class="numeric" scope="col">Small</th>
-          <th class="numeric" scope="col">Big</th>
+          {% for plan in plans %}
+          <th class="numeric" scope="col">{{ plan.title }}</th>
+          {% endfor %}
         </tr>
       </thead>
       <tbody>
         <tr>
           <th scope="row">Memory</th>
-          <td class="numeric">1Gb RAM</td>
-          <td class="numeric">6Gb RAM</td>
-          <td class="numeric">24Gb RAM</td>
+          {% for plan in plans %}
+          <td class="numeric">{{ plan['Memory'] }}</td>
+          {% endfor %}
         </tr>
         <tr>
           <th scope="row">Postgres</th>
-          <td class="numeric">Yes</td>
-          <td class="numeric">Yes</td>
-          <td class="numeric">Yes</td>
+          {% for plan in plans %}
+            {% if plan['Postgres'] is defined %}
+            <td class="numeric">Yes</td>
+            {% else %}
+            <td class="numeric">&mdash;</td>
+            {% endif %}
+          {% endfor %}
         </tr>
         <tr>
           <th scope="row">Logit</th>
-          <td class="numeric">&mdash;</td>
-          <td class="numeric">Yes</td>
-          <td class="numeric">Yes</td>
+          {% for plan in plans %}
+            {% if plan['Logit'] is defined %}
+            <td class="numeric">Yes</td>
+            {% else %}
+            <td class="numeric">&mdash;</td>
+            {% endif %}
+          {% endfor %}
         </tr>
         <tr>
           <th scope="row">Redis</th>
-          <td class="numeric">&mdash;</td>
-          <td class="numeric">&mdash;</td>
-          <td class="numeric">Yes</td>
+          {% for plan in plans %}
+            {% if plan['Redis'] is defined %}
+            <td class="numeric">Yes</td>
+            {% else %}
+            <td class="numeric">&mdash;</td>
+            {% endif %}
+          {% endfor %}
         </tr>
         <tr>
           <th scope="row">Mongo</th>
-          <td class="numeric">&mdash;</td>
-          <td class="numeric">&mdash;</td>
-          <td class="numeric">Yes</td>
+          {% for plan in plans %}
+            {% if plan['Mongo'] is defined %}
+            <td class="numeric">Yes</td>
+            {% else %}
+            <td class="numeric">&mdash;</td>
+            {% endif %}
+          {% endfor %}
         </tr>
         <tr>
           <th scope="row">Elastic search</th>
-          <td class="numeric">&mdash;</td>
-          <td class="numeric">&mdash;</td>
-          <td class="numeric">Yes</td>
+          {% for plan in plans %}
+            {% if plan['ElasticSearch'] is defined %}
+            <td class="numeric">Yes</td>
+            {% else %}
+            <td class="numeric">&mdash;</td>
+            {% endif %}
+          {% endfor %}
         </tr>
         <tr>
           <th scope="row">RabbitMQ</th>
-          <td class="numeric">&mdash;</td>
-          <td class="numeric">&mdash;</td>
-          <td class="numeric">Yes</td>
+          {% for plan in plans %}
+            {% if plan['RabbitMQ'] is defined %}
+            <td class="numeric">Yes</td>
+            {% else %}
+            <td class="numeric">&mdash;</td>
+            {% endif %}
+          {% endfor %}
         </tr>
         <tr>
           <th scope="row">Scaling</th>
-          <td class="numeric">&mdash;</td>
-          <td class="numeric">Yes</td>
-          <td class="numeric">Yes</td>
+          {% for plan in plans %}
+            {% if plan['Scaling'] is defined %}
+            <td class="numeric">Yes</td>
+            {% else %}
+            <td class="numeric">&mdash;</td>
+            {% endif %}
+          {% endfor %}
         </tr>
         <tr>
           <th scope="row">Out of office support</th>
-          <td class="numeric">&mdash;</td>
-          <td class="numeric">&mdash;</td>
-          <td class="numeric">Yes</td>
+          {% for plan in plans %}
+            {% if plan['oohs'] is defined %}
+            <td class="numeric">Yes</td>
+            {% else %}
+            <td class="numeric">&mdash;</td>
+            {% endif %}
+          {% endfor %}
         </tr>
         <tr>
           <th scope="row">Cost</th>
-          <td class="numeric">FREE</td>
-          <td class="numeric">£600</td>
-          <td class="numeric">£4500</td>
+          {% for plan in plans %}
+          <td class="numeric">{{ plan['Cost'] }}</td>
+          {% endfor %}
         </tr>
       </tbody>
     </table>

@@ -14,7 +14,11 @@ def index():
 
 @plans.route('/table-v1')
 def table_v1():
-  return render_template('plans-table.html')
+  pathtodata = 'app/data/plans.json'
+  if os.path.isfile( pathtodata ):
+    with open( pathtodata ) as data_file:
+      data = json.load( data_file )
+  return render_template('plans-table.html', plans=data['plans'])
 
 @plans.route('/cards-v1')
 def cards_v1():
