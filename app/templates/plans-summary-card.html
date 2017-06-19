@@ -14,7 +14,7 @@
         </div>
         <div class="column-third">
           <div class="plan-card-aside">
-            <h4 class="heading-small plan-card-aside-heading">Key features</h4>
+            <h4 class="heading-small plan-card-aside-heading">What you need to know</h4>
             <dl class="definition-inline definition-inline--inverse">
               <dt>Memory</dt>
               <dd>{{ plan['Memory'] }}</dd>
@@ -22,6 +22,10 @@
               <dd>{% if plan['Support'] is defined %}Yes{% else %}No{% endif %}</dd>
               <dt>Out of hours support</dt>
               <dd>{% if plan['oohs'] is defined %}Yes{% else %}No{% endif %}</dd>
+            </dl>
+            <dl class="definition-inline definition-inline--inverse plan-cost">
+              <dt>Cost</dt>
+              <dd>£{{ plan['Cost'] }} p/m</dd>
             </dl>
           </div>
         </div>
