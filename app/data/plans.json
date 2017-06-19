@@ -4,7 +4,8 @@
       "title": "Free plan",
       "Memory": "1GB RAM",
       "Postgres": ["2 'tiny' instances (1GB)"],
-      "Cost": 0
+      "Cost": 0,
+      "suitable": "Enough to allow a service team to try out the platform and get an Alpha going."
     },
     {
       "title": "Small plan",
@@ -12,7 +13,9 @@
       "Postgres": ["1 medium instance (8GB) + backed up", "2 'tiny' instances (1GB)"],
       "Logit": ["1 small instance (1GB)", "2 tiny instances (0.5GB each)"],
       "Scaling": "Yes",
-      "Cost": 600
+      "Cost": 600,
+      "suitable": "Enough to start exploring some technical challenges in Alpha, and to begin to look at your production service.", 
+      "notsuitable": "Not suitable for production if you need formal and out-of-hours support."
     },
     {
       "title": "Medium plan",
