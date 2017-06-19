@@ -27,3 +27,11 @@ def cards_v1():
     with open( pathtodata ) as data_file:
       data = json.load( data_file )
   return render_template('plans-summary-card.html', plans=data['plans'])
+
+@plans.route('/cards-detailed')
+def cards_detailed():
+  pathtodata = 'app/data/plans.json'
+  if os.path.isfile( pathtodata ):
+    with open( pathtodata ) as data_file:
+      data = json.load( data_file )
+  return render_template('plans-summary-card-detailed.html', plans=data['plans'])

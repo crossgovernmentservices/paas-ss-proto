@@ -1,0 +1,17 @@
+{% extends "layout-paas.html" %}
+
+{% block content %}
+<main id="main" role="main">
+  <div class="container">
+
+    <h1 class="heading-xlarge">Service plans</h1>
+
+    {% from "partial/render_plans_macro.html" import render_plan  %}
+
+    {% for plan in plans %}
+    {{ render_plan(plan, "detailed") }}
+    {% endfor %}
+
+  </div>
+</main>
+{% endblock %}
