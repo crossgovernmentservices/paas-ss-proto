@@ -1,0 +1,19 @@
+.plan-card {
+  border-top: 2px solid $border-colour;
+  margin-top: $gutter;
+
+  .plan-title {
+    margin-top: $gutter;
+  }
+}
+
+.plan-card-aside {
+  border-top: 5px solid $link-colour;
+  background: $highlight-colour;
+  margin-top: $gutter;
+  padding: $gutter-half;
+
+  &-heading {
+    margin-top: 0;
+  }
+}

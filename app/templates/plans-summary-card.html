@@ -6,6 +6,29 @@
 
     <h1 class="heading-xlarge">Service plans</h1>
 
+    {% for plan in plans %}
+    <section class="plan-card">
+      <div class="grid-row">
+        <div class="column-two-thirds">
+          <h2 class="heading-large plan-title">{{ plan.title }}</h2>
+        </div>
+        <div class="column-third">
+          <div class="plan-card-aside">
+            <h4 class="heading-small plan-card-aside-heading">Key features</h4>
+            <dl class="definition-inline definition-inline--inverse">
+              <dt>Memory</dt>
+              <dd>{{ plan['Memory'] }}</dd>
+              <dt>Scaling</dt>
+              <dd>{% if plan['Support'] is defined %}Yes{% else %}No{% endif %}</dd>
+              <dt>Out of hours support</dt>
+              <dd>{% if plan['oohs'] is defined %}Yes{% else %}No{% endif %}</dd>
+            </dl>
+          </div>
+        </div>
+      </div>
+    </section>
+    {% endfor %}
+
   </div>
 </main>
 {% endblock %}
