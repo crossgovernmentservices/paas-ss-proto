@@ -1,0 +1,45 @@
+{% macro render_plan(plan, type='') %}
+  {% if type == 'v1' %}
+  <p>Version 1</p>
+  {% else %}
+  {{ render_plan_card_simple_list(plan) }}
+  {% endif %}
+{% endmacro %}
+
+{% macro render_plan_card_simple_list(plan) %}
+<section class="plan-card">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <h2 class="heading-large plan-title">{{ plan.title }}</h2>
+      <p>A description of the plan and which sort of team it is suitable for goes here. This could include some stipulations about the plan e.g. apps are cleaned out after a month, or could give examples of other teams using this level of plan.</p>
+      <h4 class="heading-small">Backing services available</h4>
+      <ul class="list-bullet">
+        {% if plan['Postgres'] is defined %}<li class="column-half">Postgres</li>{% endif %}
+        {% if plan['Logit'] is defined %}<li class="column-half">LogIt</li>{% endif %}
+        {% if plan['Redis'] is defined %}<li class="column-half">Redis</li>{% endif %}
+        {% if plan['Mongo'] is defined %}<li class="column-half">MongoDB</li>{% endif %}
+        {% if plan['ElasticSearch'] is defined %}<li class="column-half">Elastic Search</li>{% endif %}
+        {% if plan['RabbitMQ'] is defined %}<li class="column-half">RabbitMQ</li>{% endif %}
+      </ul>
+        
+    </div>
+    <div class="column-third">
+      <div class="plan-card-aside">
+        <h4 class="heading-small plan-card-aside-heading">What you need to know</h4>
+        <dl class="definition-inline definition-inline--inverse">
+          <dt>Memory</dt>
+          <dd>{{ plan['Memory'] }}</dd>
+          <dt>Scaling</dt>
+          <dd>{% if plan['Scaling'] is defined %}Yes{% else %}No{% endif %}</dd>
+          <dt>Out of hours support</dt>
+          <dd>{% if plan['oohs'] is defined %}Yes{% else %}No{% endif %}</dd>
+        </dl>
+        <dl class="definition-inline definition-inline--inverse plan-cost">
+          <dt>Cost</dt>
+          <dd>£{{ plan['Cost'] }} p/m</dd>
+        </dl>
+      </div>
+    </div>
+  </div>
+</section>
+{% endmacro %}
