@@ -2,9 +2,11 @@
   {% if type == 'v1' %}
   <p>Version 1</p>
   {% elif type == 'detailed' %}
-  {{ render_plan_card_detailed(plan) }}
+    {{ render_plan_card_detailed(plan) }}
+  {% elif type == 'alternative' %}
+    {{ render_plan_card_alternative(plan) }}
   {% else %}
-  {{ render_plan_card_simple_list(plan) }}
+    {{ render_plan_card_simple_list(plan) }}
   {% endif %}
 {% endmacro %}
 
@@ -83,6 +85,56 @@
           <dt>Cost</dt>
           <dd>£{{ plan['Cost'] }} p/m</dd>
         </dl>
+      </div>
+    </div>
+  </div>
+</section>
+{% endmacro %}
+
+{% macro render_feature_alternative(feature, feature_name) %}
+  {% if feature is defined %}
+  <dt>{{ feature_name }}</dt>
+  <dd>{{ feature|join(', ') }}</dd>
+  {% endif %}
+{% endmacro %}
+
+{% macro render_plan_card_alternative(plan) %}
+<section class="plan-card">
+  <div class="grid-row">
+    <div class="column-half">
+      <h2 class="heading-large plan-title">{{ plan.title }}</h2>
+      <h4 class="heading-small">Suitable for...</h4>
+      <h4 class="heading-small">Unsuitable for...</h4>
+      <h4 class="heading-small">Estimated cost range: X - Y</h4>
+    </div>
+
+    <div class="column-half">
+      <div class="plan-card-aside">
+        <h3 class="heading-medium plan-card-aside-heading">Example service usage</h3>
+        <h4 class="heading-small">Plan basics</h4>
+        <dl class="definition-inline">
+          <dt>Memory</dt>
+          <dd>{{ plan['Memory'] }}</dd>
+          <dt>Scaling</dt>
+          <dd>{% if plan['Scaling'] is defined %}Yes{% else %}No{% endif %}</dd>
+          <dt>Out of hours support</dt>
+          <dd>{% if plan['oohs'] is defined %}Yes{% else %}No{% endif %}</dd>
+        </dl>
+        <h4 class="heading-small">Backing services</h4>
+        <dl class="definition-inline">
+          
+          {{ render_feature_alternative(plan['Postgres'], 'Postgres') }}
+          {{ render_feature_alternative(plan['Logit'], 'LogIt') }}
+          {{ render_feature_alternative(plan['Redis'], 'Redis') }}
+          {{ render_feature_alternative(plan['Mongo'], 'MongoDB') }}
+          {{ render_feature_alternative(plan['ElasticSearch'], 'ElasticSearch') }}
+          {{ render_feature_alternative(plan['RabbitMQ'], 'RabbitMQ') }}
+        </dl>
+        <dl class="definition-inline plan-cost">
+          <dt>Monthly cost</dt>
+          <dd>£{{ plan['Cost'] }}</dd>
+        </dl>
+        <p><a href="/">See breakdown</a></p>
       </div>
     </div>
   </div>

@@ -1,0 +1,23 @@
+{% extends "layout-paas.html" %}
+
+{% block content %}
+<main id="main" role="main">
+  <div class="container">
+    <div class="phase-banner">
+      <p>
+        <strong class="phase-tag phase-tag-prototype">Prototype</strong>
+        <span>This is an experimental service – it is only intended to be used for research.</span>
+      </p>
+    </div>
+
+    {% include "partial/plans/intro.html" %}
+
+    {% from "partial/render_plans_macro.html" import render_plan  %}
+
+    {% for plan in plans %}
+    {{ render_plan(plan, "alternative") }}
+    {% endfor %}
+
+  </div>
+</main>
+{% endblock %}
