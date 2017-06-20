@@ -91,3 +91,13 @@
 .phase-banner .phase-tag-prototype {
   background: $text-colour;
 }
+
+.small-text {
+  @include core-16();
+}
+
+.plan-table-detailed {
+  tr {
+    vertical-align: top;
+  }
+}

@@ -20,6 +20,14 @@ def table_v1():
       data = json.load( data_file )
   return render_template('plans-table.html', plans=data['plans'])
 
+@plans.route('/table-v2')
+def table_v2():
+  pathtodata = 'app/data/plans.json'
+  if os.path.isfile( pathtodata ):
+    with open( pathtodata ) as data_file:
+      data = json.load( data_file )
+  return render_template('plans-table-detailed.html', plans=data['plans'])
+
 @plans.route('/cards-v1')
 def cards_v1():
   pathtodata = 'app/data/plans.json'

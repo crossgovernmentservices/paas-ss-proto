@@ -1,0 +1,130 @@
+{% extends "layout-paas.html" %}
+
+{% block content %}
+<main id="main" role="main">
+  <div class="container">
+    
+    <div class="phase-banner">
+      <p>
+        <strong class="phase-tag phase-tag-prototype">Prototype</strong>
+        <span>This is an experimental service – it is only intended to be used for research.</span>
+      </p>
+    </div>
+
+    {% include "partial/plans/intro.html" %}
+
+    <table class="plan-table-detailed">
+      <thead>
+        <tr>
+          <th scope="col"></th>
+          {% for plan in plans %}
+          <th scope="col">{{ plan.title }}</th>
+          {% endfor %}
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">Memory</th>
+          {% for plan in plans %}
+          <td class="small-text">{{ plan['Memory'] }}</td>
+          {% endfor %}
+        </tr>
+        <tr>
+          <th scope="row">Postgres</th>
+          {% for plan in plans %}
+            {% if plan['Postgres'] is defined %}
+            <td>
+              <ul>
+                {% for item in plan['Postgres'] %}
+                <li class="small-text">{{ item }}</li>
+                {% endfor %}
+              </ul>
+            </td>
+            {% else %}
+            <td>&mdash;</td>
+            {% endif %}
+          {% endfor %}
+        </tr>
+        <tr>
+          <th scope="row">Logit</th>
+          {% for plan in plans %}
+            {% if plan['Logit'] is defined %}
+            <td>Yes</td>
+            {% else %}
+            <td>&mdash;</td>
+            {% endif %}
+          {% endfor %}
+        </tr>
+        <tr>
+          <th scope="row">Redis</th>
+          {% for plan in plans %}
+            {% if plan['Redis'] is defined %}
+            <td>Yes</td>
+            {% else %}
+            <td>&mdash;</td>
+            {% endif %}
+          {% endfor %}
+        </tr>
+        <tr>
+          <th scope="row">Mongo</th>
+          {% for plan in plans %}
+            {% if plan['Mongo'] is defined %}
+            <td>Yes</td>
+            {% else %}
+            <td>&mdash;</td>
+            {% endif %}
+          {% endfor %}
+        </tr>
+        <tr>
+          <th scope="row">Elastic search</th>
+          {% for plan in plans %}
+            {% if plan['ElasticSearch'] is defined %}
+            <td>Yes</td>
+            {% else %}
+            <td>&mdash;</td>
+            {% endif %}
+          {% endfor %}
+        </tr>
+        <tr>
+          <th scope="row">RabbitMQ</th>
+          {% for plan in plans %}
+            {% if plan['RabbitMQ'] is defined %}
+            <td>Yes
+            </td>
+            {% else %}
+            <td>&mdash;</td>
+            {% endif %}
+          {% endfor %}
+        </tr>
+        <tr>
+          <th scope="row">Scaling</th>
+          {% for plan in plans %}
+            {% if plan['Scaling'] is defined %}
+            <td>Yes</td>
+            {% else %}
+            <td>&mdash;</td>
+            {% endif %}
+          {% endfor %}
+        </tr>
+        <tr>
+          <th scope="row">Out of office support</th>
+          {% for plan in plans %}
+            {% if plan['oohs'] is defined %}
+            <td>Yes</td>
+            {% else %}
+            <td>&mdash;</td>
+            {% endif %}
+          {% endfor %}
+        </tr>
+        <tr>
+          <th scope="row">Cost</th>
+          {% for plan in plans %}
+          <td>£{{ plan['Cost'] }}</td>
+          {% endfor %}
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</main>
+{% endblock %}
