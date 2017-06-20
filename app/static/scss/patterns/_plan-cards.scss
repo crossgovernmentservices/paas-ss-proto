@@ -23,3 +23,13 @@
     padding-top: 10px;
   }
 }
+
+.plan-feature {
+  margin-bottom: 10px;
+}
+
+.breakdown-text {
+  @include core-16();
+  color: $secondary-text-colour;
+  margin: 0;
+}
