@@ -10,14 +10,192 @@
       </p>
     </div>
 
-    {% include "partial/plans/intro.html" %}
+    <!-- {% include "partial/plans/intro.html" %} -->
+    
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      <h1 class="heading-xlarge">GOV.UK PaaS pricing</h1>
 
-    {% from "partial/render_plans_macro.html" import render_plan  %}
+      <p>Pay for what you use above the minimum for each tier. Above the minimum fee, normal billing by the hour applies until the tier upper limits.</p>
+
+      <p>You can increase or decrease your compute capacity depending on the demands of your application and only pay the specified hourly rate for the instances you use.</p>
+
+      <p>Estimate your monthly bill using the examples below. These show the maximum you would pay using all the available plans.
+      </p>
+    </div>
+  </div>
+
+  <section class="plan-card">
+    <div class="grid-row">
+        <div class="column-two-thirds">
+          <h2 class="heading-large">Free plan</h2>
+            <p>Use GOV.UK PaaS free for 3 months.</p> 
+            <p>Ideal for experimenting with GOV.UK PaaS.</p>
+            <p>Suitable to host prototypes in Discovery/Alpha with enough memory for 10 copies of the GOV.UK Prototyping kit.</p>
+
+            <h2 class="heading-small">Backing services available</h2>
+              <li class="column-half plan-feature">Postgres<p class="breakdown-text">2 'tiny' instances (1GB)</p></li>
+        </div>     
+        <div class="column-one-third">
+            <div class="plan-card-aside">
+                  <h4 class="heading-small plan-card-aside-heading">What you need to know</h4>
+                  <dl class="definition-inline definition-inline--inverse">
+                    <dt>Memory</dt>
+                    <dd>1GB RAM</dd>
+                    <dt>Scaling</dt>
+                    <dd>No</dd>
+                    <dt>Out of hours support</dt>
+                    <dd>No</dd>
+                  </dl>
+                  <dl class="definition-inline definition-inline--inverse plan-cost">
+                    <dt>Cost</dt>
+                    <dd>£0 p/m</dd>
+                  </dl>
+                </div>
+            </div>
+      </div>
+     </section>
+
+    
+    <section class="plan-card">
+    <div class="grid-row">
+        <div class="column-two-thirds">
+          <h2 class="heading-large">Small plan</h2>
+            <p>Suitable to start exploring some technical solutions in Alpha/Beta. Enough PostgreSQL and Logit instances for 3 environments.</p> 
+            <p>Not suitable for production if you need formal and out-of-hours support.</p>
+
+            <h2 class="heading-small">Backing services available</h2>
+              <li class="column-half plan-feature">Postgres<p class="breakdown-text">2 'tiny' instances (1GB)</p></li>
+        </div>     
+        <div class="column-one-third">
+            <div class="plan-card-aside">
+                  <h4 class="heading-small plan-card-aside-heading">What you need to know</h4>
+                  <dl class="definition-inline definition-inline--inverse">
+                    <dt>Memory</dt>
+                    <dd>1GB RAM</dd>
+                    <dt>Scaling</dt>
+                    <dd>No</dd>
+                    <dt>Out of hours support</dt>
+                    <dd>No</dd>
+                  </dl>
+                  <dl class="definition-inline definition-inline--inverse plan-cost">
+                    <dt>Minimum fee</dt> 
+                    <dd>£150</dd>
+                    <dt>Upper limit</dt>
+                    <dd>£475</dd>
+                  </dl>
+                </div>
+            </div>
+      </div>
+     </section>
+
+     <section class="plan-card">
+    <div class="grid-row">
+        <div class="column-two-thirds">
+          <h2 class="heading-large">Medium plan</h2>
+            <p>Host your application in production with this medium plan. Additional backing services such as Redis make session management or database cacheing easier.</p>
+            <p>Suitable for production if your service requires out-of-hours support.</p>
+
+            <h2 class="heading-small">Backing services available</h2>
+              <ul class="grid-row">
+        
+  
+  <li class="column-half plan-feature">Postgres<p class="breakdown-text">1 medium instance (8GB) + backed up, 2 'tiny' instances (1GB)</p></li>
+
+        
+  
+  <li class="column-half plan-feature">LogIt<p class="breakdown-text">1 small instance (1GB), 2 tiny instances (0.5GB each)</p></li>
+        </div>     
+        <div class="column-one-third">
+            <div class="plan-card-aside">
+                  <h4 class="heading-small plan-card-aside-heading">What you need to know</h4>
+                  <dl class="definition-inline definition-inline--inverse">
+                    <dt>Memory</dt>
+                    <dd>1GB RAM</dd>
+                    <dt>Scaling</dt>
+                    <dd>No</dd>
+                    <dt>Out of hours support</dt>
+                    <dd>No</dd>
+                  </dl>
+                  <dl class="definition-inline definition-inline--inverse plan-cost">
+                    <dt>Minimum fee</dt>
+                    <dd>£300</dd>
+                    <dt>Upper limit</dt>
+                    <dd>£975</dd>
+                  </dl>
+                </div>
+            </div>
+      </div>
+     </section>
+
+     <section class="plan-card">
+    <div class="grid-row">
+        <div class="column-two-thirds">
+          <h2 class="heading-large">Large plan</h2>
+            <p>Use GOV.UK PaaS free for 3 months.</p> 
+            <p>Ideal for experimenting with GOV.UK PaaS.</p>
+            <p>Suitable to host prototypes in Discovery/Alpha with enough memory for 10 copies of the GOV.UK Prototyping kit.</p>
+
+            <h2 class="heading-small">Backing services available</h2>
+              <li class="column-half plan-feature">Postgres<p class="breakdown-text">2 'tiny' instances (1GB)</p></li>
+        </div>     
+        <div class="column-one-third">
+            <div class="plan-card-aside">
+                  <h4 class="heading-small plan-card-aside-heading">What you need to know</h4>
+                  <dl class="definition-inline definition-inline--inverse">
+                    <dt>Memory</dt>
+                    <dd>1GB RAM</dd>
+                    <dt>Scaling</dt>
+                    <dd>No</dd>
+                    <dt>Out of hours support</dt>
+                    <dd>No</dd>
+                  </dl>
+                  <dl class="definition-inline definition-inline--inverse plan-cost">
+                    <dt>Cost</dt>
+                    <dd>£0 p/m</dd>
+                  </dl>
+                </div>
+            </div>
+      </div>
+     </section>
+
+     <section class="plan-card">
+    <div class="grid-row">
+        <div class="column-two-thirds">
+          <h2 class="heading-large">Extra large plan</h2>
+            <p>Use GOV.UK PaaS free for 3 months.</p> 
+            <p>Ideal for experimenting with GOV.UK PaaS.</p>
+            <p>Suitable to host prototypes in Discovery/Alpha with enough memory for 10 copies of the GOV.UK Prototyping kit.</p>
+
+            <h2 class="heading-small">Backing services available</h2>
+              <li class="column-half plan-feature">Postgres<p class="breakdown-text">2 'tiny' instances (1GB)</p></li>
+        </div>     
+        <div class="column-one-third">
+            <div class="plan-card-aside">
+                  <h4 class="heading-small plan-card-aside-heading">What you need to know</h4>
+                  <dl class="definition-inline definition-inline--inverse">
+                    <dt>Memory</dt>
+                    <dd>1GB RAM</dd>
+                    <dt>Scaling</dt>
+                    <dd>No</dd>
+                    <dt>Out of hours support</dt>
+                    <dd>No</dd>
+                  </dl>
+                  <dl class="definition-inline definition-inline--inverse plan-cost">
+                    <dt>Cost</dt>
+                    <dd>£0 p/m</dd>
+                  </dl>
+                </div>
+            </div>
+      </div>
+     </section>
+
+    <!-- {% from "partial/render_plans_macro.html" import render_plan  %}
 
     {% for plan in plans %}
     {{ render_plan(plan, "detailed") }}
-    {% endfor %}
+    {% endfor %} -->
 
   </div>
 </main>
-{% endblock %}
+{% endblock %} 
