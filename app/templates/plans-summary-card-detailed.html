@@ -34,7 +34,9 @@
             <p>Suitable to host prototypes in Discovery/Alpha with enough memory for 10 copies of the GOV.UK Prototyping kit.</p>
 
             <h2 class="heading-small">Backing services available</h2>
+            <ul class="grid-row">
               <li class="column-half plan-feature">Postgres<p class="breakdown-text">2 'tiny' instances (1GB)</p></li>
+            </ul>
         </div>     
         <div class="column-one-third">
             <div class="plan-card-aside">
@@ -65,16 +67,19 @@
             <p>Not suitable for production if you need formal and out-of-hours support.</p>
 
             <h2 class="heading-small">Backing services available</h2>
-              <li class="column-half plan-feature">Postgres<p class="breakdown-text">2 'tiny' instances (1GB)</p></li>
+            <ul class="grid-row">  
+              <li class="column-half plan-feature">Postgres<p class="breakdown-text">1 medium instance (8GB) + backed up, 2 'tiny' instances (1GB)</p></li>
+              <li class="column-half plan-feature">LogIt<p class="breakdown-text">1 small instance (1GB), 2 tiny instances (0.5GB each)</p></li>
+            </ul>
         </div>     
         <div class="column-one-third">
             <div class="plan-card-aside">
                   <h4 class="heading-small plan-card-aside-heading">What you need to know</h4>
                   <dl class="definition-inline definition-inline--inverse">
                     <dt>Memory</dt>
-                    <dd>1GB RAM</dd>
+                    <dd>3GB RAM</dd>
                     <dt>Scaling</dt>
-                    <dd>No</dd>
+                    <dd>Yes</dd>
                     <dt>Out of hours support</dt>
                     <dd>No</dd>
                   </dl>
@@ -98,24 +103,20 @@
 
             <h2 class="heading-small">Backing services available</h2>
               <ul class="grid-row">
-        
-  
-  <li class="column-half plan-feature">Postgres<p class="breakdown-text">1 medium instance (8GB) + backed up, 2 'tiny' instances (1GB)</p></li>
-
-        
-  
-  <li class="column-half plan-feature">LogIt<p class="breakdown-text">1 small instance (1GB), 2 tiny instances (0.5GB each)</p></li>
+                <li class="column-half plan-feature">Postgres<p class="breakdown-text">1 medium instance (8GB) + backed up, 2 'tiny' instances (1GB)</p></li>      
+                <li class="column-half plan-feature">LogIt<p class="breakdown-text">1 small instance (1GB), 2 tiny instances (0.5GB each)</p></li>
+              </ul>
         </div>     
         <div class="column-one-third">
             <div class="plan-card-aside">
                   <h4 class="heading-small plan-card-aside-heading">What you need to know</h4>
                   <dl class="definition-inline definition-inline--inverse">
                     <dt>Memory</dt>
-                    <dd>1GB RAM</dd>
+                    <dd>6GB RAM</dd>
                     <dt>Scaling</dt>
-                    <dd>No</dd>
+                    <dd>Yes</dd>
                     <dt>Out of hours support</dt>
-                    <dd>No</dd>
+                    <dd>Yes</dd>
                   </dl>
                   <dl class="definition-inline definition-inline--inverse plan-cost">
                     <dt>Minimum fee</dt>
@@ -132,27 +133,34 @@
     <div class="grid-row">
         <div class="column-two-thirds">
           <h2 class="heading-large">Large plan</h2>
-            <p>Use GOV.UK PaaS free for 3 months.</p> 
-            <p>Ideal for experimenting with GOV.UK PaaS.</p>
-            <p>Suitable to host prototypes in Discovery/Alpha with enough memory for 10 copies of the GOV.UK Prototyping kit.</p>
+            <p>Ideal for Public Beta or Live for applications that need increased choice of backing services. Supports at least 3 environments, with high availability in production.</p>
 
             <h2 class="heading-small">Backing services available</h2>
-              <li class="column-half plan-feature">Postgres<p class="breakdown-text">2 'tiny' instances (1GB)</p></li>
+              <ul class="grid-row">
+                <li class="column-half plan-feature">Postgres<p class="breakdown-text">1 large instances (16GB), 2 medium instances (8GB), 6 tiny instance (1GB)</p></li>
+                <li class="column-half plan-feature">LogIt<p class="breakdown-text">1 large instance (5GB), 2 tiny instances (0.5GB each)</p></li>
+                <li class="column-half plan-feature">Redis<p class="breakdown-text">1 medium instance, 2 tiny instances</p></li>
+                <li class="column-half plan-feature">MongoDB<p class="breakdown-text">1 large instance, 2 tiny instances</p></li>
+                <li class="column-half plan-feature">ElasticSearch<p class="breakdown-text">1 large instance, 2 tiny instances</p></li>
+                <li class="column-half plan-feature">RabbitMQ<p class="breakdown-text">1 large instance, 2 small instances</p></li>
+      </ul>
         </div>     
         <div class="column-one-third">
             <div class="plan-card-aside">
                   <h4 class="heading-small plan-card-aside-heading">What you need to know</h4>
                   <dl class="definition-inline definition-inline--inverse">
                     <dt>Memory</dt>
-                    <dd>1GB RAM</dd>
+                    <dd>24GB RAM</dd>
                     <dt>Scaling</dt>
-                    <dd>No</dd>
+                    <dd>Yes</dd>
                     <dt>Out of hours support</dt>
-                    <dd>No</dd>
+                    <dd>Yes</dd>
                   </dl>
                   <dl class="definition-inline definition-inline--inverse plan-cost">
-                    <dt>Cost</dt>
-                    <dd>£0 p/m</dd>
+                    <dt>Minimum fee</dt>
+                    <dd>£1,000</dd>
+                    <dt>Upper limit</dt>
+                    <dd>£3,500</dd>
                   </dl>
                 </div>
             </div>
@@ -163,27 +171,34 @@
     <div class="grid-row">
         <div class="column-two-thirds">
           <h2 class="heading-large">Extra large plan</h2>
-            <p>Use GOV.UK PaaS free for 3 months.</p> 
-            <p>Ideal for experimenting with GOV.UK PaaS.</p>
-            <p>Suitable to host prototypes in Discovery/Alpha with enough memory for 10 copies of the GOV.UK Prototyping kit.</p>
+            <p>Enhanced performance and functionality for large, high volume services.</p>
 
             <h2 class="heading-small">Backing services available</h2>
-              <li class="column-half plan-feature">Postgres<p class="breakdown-text">2 'tiny' instances (1GB)</p></li>
+              <ul class="grid-row">
+                  <li class="column-half plan-feature">Postgres<p class="breakdown-text">2 'huge' instances (32GB), 6 medium instances (8GB), 24 'tiny' instances (1GB)</p></li>  
+                  <li class="column-half plan-feature">LogIt<p class="breakdown-text">1 'large' instance, 1 medium instance, 2 tiny instances (0.5GB each)</p></li>
+                  <li class="column-half plan-feature">Redis<p class="breakdown-text">2 medium instances, 4 'tiny' instances</p></li>
+                  <li class="column-half plan-feature">MongoDB<p class="breakdown-text">1 'huge' instance, 4 'tiny' instances</p></li>
+                  <li class="column-half plan-feature">ElasticSearch<p class="breakdown-text">1 large instance, 4 tiny instances</p></li>
+                  <li class="column-half plan-feature">RabbitMQ<p class="breakdown-text">1 'huge' instance, 4 small instances</p></li>
+              </ul>
         </div>     
         <div class="column-one-third">
             <div class="plan-card-aside">
                   <h4 class="heading-small plan-card-aside-heading">What you need to know</h4>
                   <dl class="definition-inline definition-inline--inverse">
                     <dt>Memory</dt>
-                    <dd>1GB RAM</dd>
+                    <dd>64GB RAM</dd>
                     <dt>Scaling</dt>
-                    <dd>No</dd>
+                    <dd>Yes</dd>
                     <dt>Out of hours support</dt>
-                    <dd>No</dd>
+                    <dd>Yes</dd>
                   </dl>
                   <dl class="definition-inline definition-inline--inverse plan-cost">
-                    <dt>Cost</dt>
-                    <dd>£0 p/m</dd>
+                    <dt>Minimum fee</dt>
+                    <dd>£2,000</dd>
+                    <dt>Upper limit</dt>
+                    <dd>£7,000</dd>
                   </dl>
                 </div>
             </div>
