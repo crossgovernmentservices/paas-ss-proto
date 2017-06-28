@@ -1,0 +1,25 @@
+{% extends "layout-paas.html" %}
+
+{% block content %}
+<main role="main" id="main">
+  <div class="container">
+    <div class="phase-banner">
+      <p>
+        <strong class="phase-tag phase-tag-prototype">Prototype</strong>
+        <span>This is an experimental service – it is only intended to be used for research.</span>
+      </p>
+    </div>
+
+  <h1 class="heading-large">Designs for Service plans</h1>
+
+  <ul>
+    <li><a href="{{ url_for('plans.table_v1') }}">Plans as comparison table</a></li>
+    <li><a href="{{ url_for('plans.table_v2') }}">Plans as more detailed comparison table</a></li>
+    <li><a href="{{ url_for('plans.cards_v1') }}">Plans as simple summary cards</a></li>
+    <li><a href="{{ url_for('plans.cards_detailed') }}">Plans as more detailed summary cards</a></li>
+    <li><a href="{{ url_for('plans.cards_alternative') }}">Plans - alternative</a></li>
+  </ul>
+
+  </div>
+</main>
+{% endblock %}

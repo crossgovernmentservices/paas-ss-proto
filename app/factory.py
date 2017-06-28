@@ -37,6 +37,9 @@ def register_blueprints(app):
     from app.blueprints.docs.views import docs
     app.register_blueprint(docs)
 
+    from app.blueprints.plans.views import plans
+    app.register_blueprint(plans)
+
 def register_context_processors(app):
     """
     Add template context variables and functions
