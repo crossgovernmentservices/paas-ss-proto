@@ -10,7 +10,15 @@
       </p>
     </div>
 
-    {% include "partial/plans/intro.html" %}
+    <!-- {% include "partial/plans/intro.html" %} -->
+    <div class="grid-row">
+      <div class="column-two-thirds">
+        <h1 class="heading-xlarge">GOV.UK PaaS pricing</h1>
+          <p>Pay for what you use. You pay by the hour with no long-term commitments or upfront payments.</p> 
+          <p>You can increase or decrease your compute capacity depending on the demands of your application and only pay the specified hourly rate for the instances you use.</p>
+          <p>Estimate your monthly bill using the examples below.</p>
+      </div>
+    </div>
 
     {% from "partial/render_plans_macro.html" import render_plan  %}
 
