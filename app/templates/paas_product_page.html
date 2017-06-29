@@ -5,14 +5,14 @@
 
 {% block header_title %}
 Platform as a Service
-<span class="phase-banner">Beta</span>
+<span class="phase-tag">Beta</span>
 {% endblock %}
 
 {% block header_nav %}
 <nav id="navigation" class="header__navigation" aria-label="Top Level Navigation" aria-hidden="true">
   <ul>
     <li class="active">
-      <a href="#main">
+      <a href="/product-page">
         About
       </a>
     </li>
@@ -24,6 +24,11 @@ Platform as a Service
     <li>
       <a href="https://www.cloud.service.gov.uk/roadmap.html">
         Roadmap
+      </a>
+    </li>
+    <li>
+      <a href="/plans/cards-alternative">
+        Pricing
       </a>
     </li>
     <li>
@@ -69,8 +74,7 @@ Platform as a Service
         </a>
 
         <span>or <a href="{{ url_for('ss.sign_in') }}"> sign in</a> if you've used it before</span>
-
-        <p>You’ll be able to deploy test applications in a safe environment and test the features of the command line tool.</p>
+        <!-- <p>You’ll be able to deploy test applications in a safe environment and test the features of the command line tool.</p> -->
       </div>
       <div class="hero__aside-image">
           <img src="static/images/paas-top-image.png" alt="" role="presentation">
@@ -115,9 +119,8 @@ Platform as a Service
 
         <section class="content-section content-section--with-top-border">
           <h2 class="heading-large content-section__first-heading">What you pay for</h2>
-          <p class="content-section__body">You pay for what you use, like hosting, compute resource and backing services such as a database. The Government Digital Service (GDS) will pay for building and maintaining the platform.</p>
-                <p class="content-section__body">The overall cost depends on factors such as the number of environments you deploy to, the size and number of your applications and whether they need to have high availability.</p>
-
+          <p class="content-section__body">The overall cost depends on factors such as the number of environments you deploy to, the size and number of your applications and whether your service needs out of hours support.</p>
+                <p class="content-section__body"><a href="/plans/cards-alternative">Find out more about GOV.UK pricing</a> and work out how much it would cost to run your service.</p>
         </section>
 
             <section class="content-section content-section--with-top-border">
