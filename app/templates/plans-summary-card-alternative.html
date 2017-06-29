@@ -16,15 +16,210 @@
         <h1 class="heading-xlarge">GOV.UK PaaS pricing</h1>
           <p>Pay for what you use. You pay by the hour with no long-term commitments or upfront payments.</p> 
           <p>You can increase or decrease your compute capacity depending on the demands of your application and only pay the specified hourly rate for the instances you use.</p>
-          <p>Estimate your monthly bill using the examples below.</p>
+          <p>Estimate your monthly bill using the examples below. Prices are given in sterling, but may be subject to exchange rate variations.</p>
       </div>
     </div>
+<section class="plan-card">
+  <div class="grid-row">
+      <div class="column-half">
+        <h2 class="heading-large plan-title">Free trial account</h2>
+        <p>Experimenting with GOV.UK PaaS and hosting prototypes (enough memory for 10 copies of the GOV.UK Prototyping kit).</p>
+      </div>
 
-    {% from "partial/render_plans_macro.html" import render_plan  %}
+      <div class="column-half">
+        <div class="plan-card-aside">
+          <h3 class="heading-medium plan-card-aside-heading">Example service usage</h3>
+          <h4 class="heading-small">Plan basics</h4>
+          <dl class="definition-inline">
+            <dt>Memory</dt>
+            <dd>1GB RAM</dd>
+            <dt>Scaling</dt>
+            <dd>No</dd>
+            <dt>Out of hours support</dt>
+            <dd>No</dd>
+          </dl>
+          <h4 class="heading-small">Backing services</h4>
+          <dl class="definition-inline">
+            <dt>Postgres</dt>
+            <dd>2 'tiny' instances (1GB)</dd>
+          </dl>
+          <dl class="definition-inline plan-cost">
+            <dt>Monthly cost</dt>
+            <dd>£0</dd>
+          </dl>
+          <p><a href="#">See breakdown</a></p>
+        </div>
+      </div>
+  </div>
+</section>
+
+
+<section class="plan-card">
+  <div class="grid-row">
+    <div class="column-half">
+      <h2 class="heading-large plan-title">Small service</h2>
+      <p>This small service uses 3GB RAM and makes use of PostgreSQL across 3 environments. Does not require out of hours support.</p>
+    </div>
+    <div class="column-half">
+      <div class="plan-card-aside">
+        <h3 class="heading-medium plan-card-aside-heading">Example service usage</h3>
+        <h4 class="heading-small">Plan basics</h4>
+        <dl class="definition-inline">
+          <dt>Memory</dt>
+          <dd>3GB RAM</dd>
+          <dt>Scaling</dt>
+          <dd>Yes</dd>
+          <dt>Out of hours support</dt>
+          <dd>No</dd>
+        </dl>
+        <h4 class="heading-small">Backing services</h4>
+        <dl class="definition-inline">
+  <dt>Postgres</dt>
+  <dd>1 medium instance (8GB) + backed up, 2 'tiny' instances (1GB)</dd>
+  <dt>LogIt</dt>
+  <dd>1 small instance (1GB), 2 tiny instances (0.5GB each)</dd>
+        </dl>
+        <dl class="definition-inline plan-cost">
+          <dt>Monthly cost</dt>
+          <dd>£475</dd>
+        </dl>
+        <p><a href="#">See breakdown</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="plan-card">
+  <div class="grid-row">
+    <div class="column-half">
+      <h2 class="heading-large plan-title">Medium service</h2>
+      <p>This medium service uses 6GB RAM and PostgreSQL, Redis and Logit across 3 environments. Requires out of hours support.</p>
+    </div>
+    <div class="column-half">
+      <div class="plan-card-aside">
+        <h3 class="heading-medium plan-card-aside-heading">Example service usage</h3>
+        <h4 class="heading-small">Plan basics</h4>
+        <dl class="definition-inline">
+          <dt>Memory</dt>
+          <dd>6GB RAM</dd>
+          <dt>Scaling</dt>
+          <dd>Yes</dd>
+          <dt>Out of hours support</dt>
+          <dd>Yes</dd>
+        </dl>
+        <h4 class="heading-small">Backing services</h4>
+        <dl class="definition-inline">
+  <dt>Postgres</dt>
+  <dd>1 'tiny' instances (1GB), 2 medium instances (8GB)</dd>
+  <dt>LogIt</dt>
+  <dd>1 medium instance (3GB), 2 tiny instances (0.5GB each)</dd>
+  <dt>Redis</dt>
+  <dd>3 'tiny' instances</dd>
+        </dl>
+        <dl class="definition-inline plan-cost">
+          <dt>Monthly cost</dt>
+          <dd>£975</dd>
+        </dl>
+        <p><a href="#">See breakdown</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="plan-card">
+  <div class="grid-row">
+    <div class="column-half">
+      <h2 class="heading-large plan-title">Large service</h2>
+      <p>This large service requires increased choice of backing services across 3 environments, and requires out of hours support.</p>
+    </div>
+    <div class="column-half">
+      <div class="plan-card-aside">
+        <h3 class="heading-medium plan-card-aside-heading">Example service usage</h3>
+        <h4 class="heading-small">Plan basics</h4>
+        <dl class="definition-inline">
+          <dt>Memory</dt>
+          <dd>24GB RAM</dd>
+          <dt>Scaling</dt>
+          <dd>Yes</dd>
+          <dt>Out of hours support</dt>
+          <dd>Yes</dd>
+        </dl>
+        <h4 class="heading-small">Backing services</h4>
+        <dl class="definition-inline"> 
+  <dt>Postgres</dt>
+  <dd>1 large instances (16GB), 2 medium instances (8GB), 6 tiny instance (1GB)</dd>
+  <dt>LogIt</dt>
+  <dd>1 large instance (5GB), 2 tiny instances (0.5GB each)</dd>
+  <dt>Redis</dt>
+  <dd>1 medium instance, 2 tiny instances</dd> 
+  <dt>MongoDB</dt>
+  <dd>1 large instance, 2 tiny instances</dd>
+  <dt>ElasticSearch</dt>
+  <dd>1 large instance, 2 tiny instances</dd>
+  <dt>RabbitMQ</dt>
+  <dd>1 large instance, 2 small instances</dd>
+        </dl>
+        <dl class="definition-inline plan-cost">
+          <dt>Monthly cost</dt>
+          <dd>£3500</dd>
+        </dl>
+        <p><a href="#">See breakdown</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="plan-card">
+  <div class="grid-row">
+    <div class="column-half">
+      <h2 class="heading-large plan-title">Extra large service</h2>
+      <p>This very large service, high volume service requires increased choice of backing services across 5 environments and needs out of hours support.</p>
+    </div>
+    <div class="column-half">
+      <div class="plan-card-aside">
+        <h3 class="heading-medium plan-card-aside-heading">Example service usage</h3>
+        <h4 class="heading-small">Plan basics</h4>
+        <dl class="definition-inline">
+          <dt>Memory</dt>
+          <dd>64GB RAM</dd>
+          <dt>Scaling</dt>
+          <dd>Yes</dd>
+          <dt>Out of hours support</dt>
+          <dd>Yes</dd>
+        </dl>
+        <h4 class="heading-small">Backing services</h4>
+        <dl class="definition-inline"> 
+  <dt>Postgres</dt>
+  <dd>2 'huge' instances (32GB), 6 medium instances (8GB), 24 'tiny' instances (1GB)</dd>
+  <dt>LogIt</dt>
+  <dd>1 'large' instance, 1 medium instance, 2 tiny instances (0.5GB each)</dd>
+  <dt>Redis</dt>
+  <dd>2 medium instances, 4 'tiny' instances</dd>
+  <dt>MongoDB</dt>
+  <dd>1 'huge' instance, 4 'tiny' instances</dd> 
+  <dt>ElasticSearch</dt>
+  <dd>1 large instance, 4 tiny instances</dd> 
+  <dt>RabbitMQ</dt>
+  <dd>1 'huge' instance, 4 small instances</dd>
+        </dl>
+        <dl class="definition-inline plan-cost">
+          <dt>Monthly cost</dt>
+          <dd>£7000</dd>
+        </dl>
+        <p><a href="#">See breakdown</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <!-- {% from "partial/render_plans_macro.html" import render_plan  %}
 
     {% for plan in plans %}
     {{ render_plan(plan, "alternative") }}
-    {% endfor %}
+    {% endfor %} -->
 
   </div>
 </main>
