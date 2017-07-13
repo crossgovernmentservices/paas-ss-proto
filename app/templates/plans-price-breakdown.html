@@ -38,7 +38,8 @@
         {% for example in prod.examples %}
         <tr>
           <th scope="row">{{ example.name }} - {{ example.usage }}{{ prod.unit }}</th>
-          <td class="numeric">£{{ example.usage*prod.monthly }}</td>
+          {% set cost = example.usage*prod.monthly %}
+          <td class="numeric">£{{ "%.2f" % cost }}</td>
         </tr>
         {% endfor %}
       </tbody>
