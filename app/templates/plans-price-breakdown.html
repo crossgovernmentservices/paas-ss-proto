@@ -1,0 +1,79 @@
+{% extends "layout-paas.html" %}
+
+{% block content %}
+<main id="main" role="main">
+  <div class="container">
+    <div class="phase-banner">
+      <p>
+        <strong class="phase-tag phase-tag-prototype">Prototype</strong>
+        <span>This is an experimental service – it is only intended to be used for research.</span>
+      </p>
+    </div>
+
+    <h1 class="heading-xlarge">Price breakdown</h1>
+
+    <p class="lede text">When using PaaS our tenants pay for what they use whether that is compute power or use of the various backing services available.</p>
+
+    <p>Below is a breakdown of the unit costs for each of our offerings.</p>
+
+    {% macro render_pricing_breakdown(prod) %}
+    <h4 class="heading-small">Pricing</h4>
+    <dl class="definition-inline definition-inline--inverse">
+      <dt>Unit</dt>
+      <dd>{{ prod.unit }}</dd>
+      <dt>Cost per hour</dt>
+      <dd>£{{ prod.hourly }}</dd>
+      <dt>Cost per month</dt>
+      <dd>£{{ prod.monthly }}</dd>
+    </dl>
+
+    <table class="text pricing-table">
+      <thead>
+        <tr>
+          <th scope="col">Options</th>
+          <th class="numeric" scope="col">Cost</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for example in prod.examples %}
+        <tr>
+          <th scope="row">{{ example.name }} - {{ example.usage }}{{ prod.unit }}</th>
+          <td class="numeric">£{{ example.usage*prod.monthly }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    {% endmacro %}
+
+    <h2 class="heading-large">Compute</h2>
+    <p class="text">The base cost of using the PaaS is based on the amount of memory your Service, apps and instances use up.</p>
+    {{ render_pricing_breakdown(data.compute) }}
+
+    <h2 class="heading-large">Backing services</h2>
+    <h3 class="heading-medium">Postgres</h3>
+    <p>--- What goes here ---</p>
+
+    <h3 class="heading-medium">Redis</h3>
+    {{ render_pricing_breakdown(data.redis) }}
+    
+    <h3 class="heading-medium">ElasticSearch</h3>
+    {{ render_pricing_breakdown(data.elasticsearch) }}
+
+    <h3 class="heading-medium">RabbitMQ</h3>
+    {{ render_pricing_breakdown(data.rabbitmq) }}
+
+    <h3 class="heading-medium">MongoDB</h3>
+    {{ render_pricing_breakdown(data.mongodb) }}
+
+    <h3 class="heading-medium">LogIt</h3>
+    <p>--- What goes here ---</p>
+
+    <h2 class="heading-large">Out of hours support ??</h2>
+    <p>--- Is this something we'd like to include ---</p>
+
+    <h2 class="heading-large">What next</h2>
+    <a href="">Customise a plan to get a quote.</a>
+
+  </div>
+</main>
+{% endblock %}
