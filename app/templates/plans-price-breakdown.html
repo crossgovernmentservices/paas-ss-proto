@@ -77,8 +77,10 @@
     <p>--- Is this something we'd like to include ---</p>
 
     <h2 class="heading-large">What next</h2>
-    <a href="">Customise a plan to get a quote.</a>
-
+    <ul class="list-bullet">
+      <li><a href="{{ url_for('plans.cards_detailed') }}">View detailed pricing plans.</a></li>
+      <li><a href="">Customise a plan to get a quote.</a></li>
+    </ul>
   </div>
 </main>
 {% endblock %}
