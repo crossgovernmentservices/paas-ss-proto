@@ -10,6 +10,10 @@
       </p>
     </div>
 
+    {% if referrer %}
+    <a href="{{ referrer }}" class="link-back">Back</a>
+    {% endif %}
+
     <h1 class="heading-xlarge">Price breakdown</h1>
 
     <p class="lede text">When using PaaS our tenants pay for what they use whether that is compute power or use of the various backing services available.</p>
