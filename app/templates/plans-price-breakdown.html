@@ -56,7 +56,7 @@
 
     <h2 class="heading-large">Backing services</h2>
     <h3 class="heading-medium">Postgres</h3>
-    <p>--- What goes here ---</p>
+    {{ render_pricing_breakdown(data.postgres) }}
 
     <h3 class="heading-medium">Redis</h3>
     {{ render_pricing_breakdown(data.redis) }}
@@ -71,10 +71,7 @@
     {{ render_pricing_breakdown(data.mongodb) }}
 
     <h3 class="heading-medium">LogIt</h3>
-    <p>--- What goes here ---</p>
-
-    <h2 class="heading-large">Out of hours support ??</h2>
-    <p>--- Is this something we'd like to include ---</p>
+    {{ render_pricing_breakdown(data.logit) }}
 
     <h2 class="heading-large">What next</h2>
     <ul class="list-bullet">

@@ -10,6 +10,17 @@
       { "name": "XLarge", "usage": 64 }
     ]
   },
+  "postgres": {
+    "unit": "GB",
+    "hourly": 0.2,
+    "monthly": 146,
+    "examples": [
+      { "name": "Tiny instance", "usage": 10 },
+      { "name": "Small instance", "usage": 25 },
+      { "name": "Medium instance", "usage": 40 },
+      { "name": "Large instance", "usage": 104 }
+    ]
+  },
   "redis": {
     "unit": "MB",
     "hourly": "~",
@@ -51,6 +62,17 @@
       { "name": "Medium instance", "usage": 25 },
       { "name": "Large instance", "usage": 50 },
       { "name": "XLarge instance", "usage": 75 }
+    ]
+  },
+  "logit": {
+    "unit": "GB",
+    "hourly": 0.01,
+    "monthly": 23,
+    "examples": [
+      { "name": "Tiny instance", "usage": 1 },
+      { "name": "Small instance", "usage": 2 },
+      { "name": "Medium instance", "usage": 7 },
+      { "name": "Large instance", "usage": 13 }
     ]
   }
 }
