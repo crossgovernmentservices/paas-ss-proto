@@ -118,7 +118,7 @@ class GovUkElements(object):
 
     def build(self, unzip_dir):
         move_dir(
-            '{}/govuk_elements-master/public'.format(unzip_dir),
+            '{}/govuk_elements-master/assets'.format(unzip_dir),
             to=self.dest_dir)
 
 
