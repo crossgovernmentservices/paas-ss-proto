@@ -1,0 +1,58 @@
+{
+  "compute": {
+    "unit": "GB RAM",
+    "hourly": "$0.288",
+    "monthly": "$210.25",
+    "examples": {
+      "small": { "usage": "3" },
+      "medium": { "usage": "6", },
+      "large": { "usage": "24" },
+      "xlarge": { "usage": "64" }
+    }
+  },
+  "database": {
+    "unit":,
+    "hourly":,
+    "monthly":,
+    "tiny": { "usage": , "cost": },
+    "small": { "usage": , "cost": },
+    "medium": { "usage": , "cost": },
+    "large": { "usage": , "cost": },
+    "xlarge": { "usage": , "cost": }
+  },
+  "Redis": {
+    "unit": "MB",
+    "hourly": ,
+    "monthly":,
+    "tiny": { "usage": "32" , "cost": "$6.64" },
+    "small": { "usage": "100", "cost": "$20.75" },
+    "medium": { "usage": "256", "cost": "$53.13" },
+    "large": { "usage": "1024", "cost": "$212.50" }
+  },
+  "ElasticSearch": {
+    "unit": "GB",
+    "hourly":,
+    "monthly": "$28.33",
+    "small": { "usage": "2 GB", "cost": "$56.67" },
+    "medium": { "usage": "10 GB", "cost": "$283.33" },
+    "large": { "usage": "25 GB", "cost": "$708.33" }
+  },
+  "RabbitMQ": {
+    "unit": "MB",
+    "hourly": "~",
+    "monthly": "$0.21",
+    "small": { "usage": "256", "cost": },
+    "medium": { "usage": "1000", "cost": },
+    "large": { "usage": "5000", "cost": }
+  },
+  "MongoDB": {
+    "unit": "GB",
+    "hourly": ,
+    "monthly":,
+    "tiny": { "usage": "1" , "cost": "$28.33" },
+    "small": { "usage": "10", "cost": "$283.33" },
+    "medium": { "usage": "25", "cost": "$708.33" },
+    "large": { "usage": "50", "cost": "$1,416.67" },
+    "xlarge": { "usage": "75", "cost": "$2,125.00" }
+  }
+}

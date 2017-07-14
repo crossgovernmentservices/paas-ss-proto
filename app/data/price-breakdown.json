@@ -1,0 +1,78 @@
+{
+  "compute": {
+    "unit": "GB RAM",
+    "hourly": 0.288,
+    "monthly": 210.25,
+    "examples": [
+      { "name": "Small", "usage": 3 },
+      { "name": "Medium", "usage": 6 },
+      { "name": "Large", "usage": 24 },
+      { "name": "XLarge", "usage": 64 }
+    ]
+  },
+  "postgres": {
+    "unit": "GB",
+    "hourly": 0.2,
+    "monthly": 146,
+    "examples": [
+      { "name": "Tiny instance", "usage": 10 },
+      { "name": "Small instance", "usage": 25 },
+      { "name": "Medium instance", "usage": 40 },
+      { "name": "Large instance", "usage": 104 }
+    ]
+  },
+  "redis": {
+    "unit": "MB",
+    "hourly": "~",
+    "monthly": 0.21,
+    "examples": [
+      { "name": "Tiny instance", "usage": 32 },
+      { "name": "Small instance", "usage": 100 },
+      { "name": "Medium instance", "usage": 256 },
+      { "name": "Large instance", "usage": 1024 }
+    ]
+  },
+  "elasticsearch": {
+    "unit": "GB",
+    "hourly": 0.04,
+    "monthly": 28.33,
+    "examples": [
+      { "name": "Small", "usage": 2 },
+      { "name": "Medium", "usage": 10 },
+      { "name": "Large", "usage": 25 }
+    ]
+  },
+  "rabbitmq": {
+    "unit": "MB",
+    "hourly": "~",
+    "monthly": 0.21,
+    "examples": [
+      { "name": "Small", "usage": 256 },
+      { "name": "Medium", "usage": 1000 },
+      { "name": "Large", "usage": 5000 }
+    ]
+  },
+  "mongodb": {
+    "unit": "GB",
+    "hourly": 0.04,
+    "monthly": 28.33,
+    "examples": [
+      { "name": "Tiny instance", "usage": 1 },
+      { "name": "Small instance", "usage": 10 },
+      { "name": "Medium instance", "usage": 25 },
+      { "name": "Large instance", "usage": 50 },
+      { "name": "XLarge instance", "usage": 75 }
+    ]
+  },
+  "logit": {
+    "unit": "GB",
+    "hourly": 0.01,
+    "monthly": 23,
+    "examples": [
+      { "name": "Tiny instance", "usage": 1 },
+      { "name": "Small instance", "usage": 2 },
+      { "name": "Medium instance", "usage": 7 },
+      { "name": "Large instance", "usage": 13 }
+    ]
+  }
+}
